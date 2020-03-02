@@ -19,7 +19,7 @@
 <meta property="og:description" content="一些基本高频的Java基础-参考JavaGuide开源项目">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-02T09:33:22.852Z">
+<meta property="og:updated_time" content="2020-03-02T09:40:51.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
 
@@ -141,7 +141,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 811 words)
+                    7 minutes read (About 1023 words)
                 </span>
                 
                 
@@ -161,11 +161,7 @@
 <p><em>note</em>:面向过程也需要分配内存，计算内存偏移量，Java性能差的原因并不是因为它是面向对象的语言，而是Java是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机械码。</p>
 <blockquote>
 <p>Java程序从源文件创建到程序运行要经过两大步骤：</p>
-</blockquote>
-<blockquote>
 <p>1、源文件由编译器编译成字节码（ByteCode）； </p>
-</blockquote>
-<blockquote>
 <p>2、字节码由java虚拟机解释运行。因为java程序既要编译同时也要经过JVM的解释运行，所以说Java被称为半解释语言。</p>
 </blockquote>
 <p>而面向过程语言大多都是直接编译成机械码在电脑上执行，并且其它一些面向过程的脚本语言性能也并不一定比Java好。</p>
@@ -188,6 +184,9 @@
 <p>在Java中，JVM可以理解的代码就叫<code>字节码</code>（即扩展名为.class的文件），它不免向任何特定的处理器，只面向虚拟机。Java语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以Java程序运行时比较高效，而且由于字节码并不针对一种特定的机器，因此，Java程序不需要重新编译就可以在多种不同的操作系统的计算机上运行。</p>
 </blockquote>
 <p>Java程序从源代码到运行一般由下面3步：</p>
+
+
+<p>我们需要格外注意的是 .class-&gt;机器码 这一步。在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT 编译器，而JIT 属于运行时编译。当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 Java 是编译与解释共存的语言。</p>
 
         </div>
         
