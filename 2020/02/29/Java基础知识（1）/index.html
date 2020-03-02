@@ -10,16 +10,16 @@
 <title>Java基础知识（1） - Hexo</title>
 
 
-    <meta name="description" content="一些基本高频的Java基础-参考JavaGuide开源项目">
+    <meta name="description" content="一些基本高频的Java基础">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础知识（1）">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;29&#x2F;Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一些基本高频的Java基础-参考JavaGuide开源项目">
+<meta property="og:description" content="一些基本高频的Java基础">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-02T14:43:32.864Z">
+<meta property="og:updated_time" content="2020-03-02T14:50:12.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
 
@@ -154,8 +154,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="一些基本高频的Java基础"><a href="#一些基本高频的Java基础" class="headerlink" title="一些基本高频的Java基础"></a>一些基本高频的Java基础</h1><h4 id="参考JavaGuide开源项目"><a href="#参考JavaGuide开源项目" class="headerlink" title="-参考JavaGuide开源项目"></a>-参考JavaGuide开源项目</h4><a id="more"></a>
+            <h1 id="一些基本高频的Java基础"><a href="#一些基本高频的Java基础" class="headerlink" title="一些基本高频的Java基础"></a>一些基本高频的Java基础</h1><a id="more"></a>
 
+<h4 id="参考JavaGuide开源项目"><a href="#参考JavaGuide开源项目" class="headerlink" title="-参考JavaGuide开源项目"></a>-参考JavaGuide开源项目</h4><hr>
 <h2 id="1-面向对象和面向过程的区别"><a href="#1-面向对象和面向过程的区别" class="headerlink" title="-1.面向对象和面向过程的区别"></a>-1.面向对象和面向过程的区别</h2><p>· <strong>面向过程</strong> ： 面向过程性能比面向对象更高。 因为类调用时需要需要实例化，比较消耗资源，所以当性能是重要的考量要素的时候，比如单片机、嵌入式开发、Linux/Unix等一般采用面向过程的开发。</p>
 <p>·<strong>面向对象</strong>：面向对象易维护、易复用、易扩展。因为面向对象有封装、继承、堕胎的特性，所以可以设计出低耦合的系统，是整个系统更加的灵活、也更易于维护。</p>
 <p><em>note</em>:面向过程也需要分配内存，计算内存偏移量，Java性能差的原因并不是因为它是面向对象的语言，而是Java是半编译语言，最终的执行代码并不是可以直接被CPU执行的二进制机械码。</p>
@@ -184,7 +185,7 @@
 <p>在Java中，JVM可以理解的代码就叫<code>字节码</code>（即扩展名为.class的文件），它不免向任何特定的处理器，只面向虚拟机。Java语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以Java程序运行时比较高效，而且由于字节码并不针对一种特定的机器，因此，Java程序不需要重新编译就可以在多种不同的操作系统的计算机上运行。</p>
 </blockquote>
 <p>Java程序从源代码到运行一般由下面3步：</p>
-
+<img src="/2020/02/29/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89/JVM.png" class title="This is image">
 
 <p>我们需要格外注意的是 .class-&gt;机器码 这一步。在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT 编译器，而JIT 属于运行时编译。当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 Java 是编译与解释共存的语言。</p>
 <p><strong>总结</strong>:</p>
@@ -234,7 +235,7 @@
 <h2 id="10-重载和重写的区别"><a href="#10-重载和重写的区别" class="headerlink" title="-10. 重载和重写的区别"></a>-10. 重载和重写的区别</h2><p><strong>重载</strong>(overloading)</p>
 <p>发生在同一个类中，方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同。</p>
 <p>下面是《Java核心技术》对重载这个概念的介绍：</p>
-
+<img src="/2020/02/29/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89/override.jpg" class title="This is image">
 
 <p><strong>重写</strong>(override)</p>
 <p>重写是子类对父类的允许访问的方法的实现过程进行重新编写,发生在子类中，方法名、参数列表必须相同，返回值范围小于等于父类，抛出的异常范围小于等于父类，访问修饰符范围大于等于父类。另外，如果父类方法访问修饰符为 private 则子类就不能重写该方法。<strong>也就是说方法提供的行为改变，而方法的外貌并没有改变。</strong></p>
@@ -351,6 +352,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Java基础知识(2)</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/10/Study-Plan/">
@@ -408,7 +416,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            4
+                            5
                         </p>
                     </a>
                 </div>
@@ -547,6 +555,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础知识(2)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T14:46:29.000Z">2020-03-02</time></div>
+                    <a href="/2020/03/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础知识(2)</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/29/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础知识（1）">
@@ -631,6 +658,17 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/02/">
@@ -723,6 +761,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础知识(2)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-02T14:46:29.000Z">2020-03-02</time></div>
+                    <a href="/2020/03/02/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础知识(2)</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/29/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%881%EF%BC%89/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础知识（1）">
@@ -807,6 +864,17 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/02/">
