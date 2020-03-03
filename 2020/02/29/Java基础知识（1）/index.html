@@ -19,7 +19,7 @@
 <meta property="og:description" content="一些基本高频的Java基础">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-02T14:50:12.992Z">
+<meta property="og:updated_time" content="2020-03-03T08:47:48.421Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
 
@@ -141,7 +141,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    36 minutes read (About 5410 words)
+                    36 minutes read (About 5412 words)
                 </span>
                 
                 
@@ -251,7 +251,7 @@
 <h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>所谓多态就是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底是哪个类中实现的方法，必须在由程序运行期间才能决定。</p>
 <p>在Java中有两种形式可以实现多态：继承（多个子类对同一方法的重写）和接口（实现接口并覆盖接口中同一方法）。</p>
 <hr>
-<h2 id="11-Java-面向对象编程三大特性-封装-继承-多态-1"><a href="#11-Java-面向对象编程三大特性-封装-继承-多态-1" class="headerlink" title="-11. Java 面向对象编程三大特性: 封装 继承 多态"></a>-11. Java 面向对象编程三大特性: 封装 继承 多态</h2><p><strong>可变性</strong></p>
+<h2 id="12-String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的"><a href="#12-String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的" class="headerlink" title="-12. String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?"></a>-12. String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</h2><p><strong>可变性</strong></p>
 <p>简单的来说：String 类中使用 final 关键字修饰字符数组来保存字符串，<code>private　final　char　value[]</code>，所以 String 对象是不可变的。而StringBuilder 与 StringBuffer 都继承自 AbstractStringBuilder 类，在 AbstractStringBuilder 中也是使用字符数组保存字符串<code>char[]value</code> 但是没有用 final 关键字修饰，所以这两种对象都是可变的。</p>
 <p>StringBuilder 与 StringBuffer 的构造方法都是调用父类构造方法也就是 AbstractStringBuilder 实现的，大家可以自行查阅源码。</p>
 <p>AbstractStringBuilder.java</p>
